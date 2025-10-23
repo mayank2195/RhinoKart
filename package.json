@@ -1,7 +1,7 @@
 {
   "name": "rhino-kart",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.14.0",
