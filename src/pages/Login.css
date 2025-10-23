@@ -1,0 +1,196 @@
+
+/* Main card */
+.login-card {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  background: white;
+}
+
+/* Left box */
+.login-left {
+  flex: 1;
+  background: #fff6f0;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo + Text */
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.logo-text img {
+  width: 100px;
+  height: auto;
+}
+
+.logo-text span {
+  font-weight: bold;
+  font-size: 30px;
+  color: #222;
+}
+
+/* Tagline */
+.login-tagline {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Left product images */
+.left-images {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left-images img {
+  width: 200px; 
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Right box */
+.login-right {
+  flex: 1;
+  background: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.login-sub {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.login-sub span {
+  color: #ff6b35;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Form */
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1.05rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 5px rgba(255, 107, 53, 0.4);
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: #ff6b35;
+  cursor: pointer;
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+/* Normal Login Button */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6b35;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #e85c2c;
+}
+
+/* Google Login Button */
+.google-login-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.google-login-button:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.google-logo {
+  width: 22px;
+  height: 22px;
+}
+/* Outer wrapper to center card */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  /* ✅ background ab full screen rahega */
+  width: 100%;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  font-family: 'Inter', sans-serif;
+  padding: 20px; /* ✅ mobile par thoda gap */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    max-width: 95%;
+    margin-top: 40px;   /* ✅ upar se gap */
+    margin-bottom: 40px; /* neeche se bhi gap */
+  }
+}
+

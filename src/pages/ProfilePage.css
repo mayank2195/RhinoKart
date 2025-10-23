@@ -1,0 +1,212 @@
+/* ---------- Layout ---------- */
+.profile-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f4ef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 240px;
+  background-color: #d3b896;
+  padding: 25px 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #222;
+  transition: all 0.25s ease;
+}
+
+.sidebar nav ul li:hover a {
+  color: #fff;
+  background: #a6866e;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.sidebar nav ul li:hover {
+  opacity: 0.95;
+}
+
+/* ---------- Profile Card Container ---------- */
+.profile-card-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* ---------- Profile Card ---------- */
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Logo/Profile Image */
+.profile-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d3b896;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Upload Button */
+.upload-logo-btn {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #fff;
+  background: #6b4e37;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.upload-logo-btn:hover {
+  background: #8a6b54;
+  transform: scale(1.03);
+}
+
+/* Brand Name */
+.brand-name {
+  color: #555;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Stats Section */
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.stats-row strong {
+  display: block;
+  font-size: 18px;
+  color: #333;
+}
+
+/* ---------- Reels Grid ---------- */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.reel-card {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #eee;
+}
+
+.reel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.reel-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Views Count Overlay */
+.reel-views {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+}
+
+/* No Reels Text */
+.no-reels {
+  margin-top: 20px;
+  color: #777;
+  font-size: 15px;
+  text-align: center;
+}
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-card strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+.stat-card span {
+  font-size: 14px;
+  color: gray;
+}
+
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+.reel-card {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.reel-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

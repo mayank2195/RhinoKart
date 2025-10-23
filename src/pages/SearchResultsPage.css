@@ -1,0 +1,118 @@
+.search-page {
+  padding: 20px;
+}
+.cart{
+  background:rgb(67, 206, 162);
+}
+.watch{
+      background: rgb(217, 83, 79);
+}
+/* Search bar stays at the very top */
+.search-bar-wrapper {
+  display: flex;
+  justify-content: flex-start; /* Left aligned */
+  margin-bottom: 20px;
+}
+.full-page{
+background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+.search-form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 10px 40px 10px 12px; /* extra space for icon */
+  border: 4px solid black; /* black border */
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-icon-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+.search-icon-btn:hover {
+  color: #000;
+}
+
+.search-title {
+  margin: 10px 0 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Cards start from top-left and fill the page */
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: start; /* Align cards to left */
+}
+
+.product-card3 {
+  height: 370px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.image-container2 {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.image-container2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-price {
+  color: #e53935;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.product-card3:hover {
+  transform: translateY(-3px);
+}
+
+.product-actions button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-actions button:hover {
+  background: #e64a19;
+}
+
+.full-page {
+  height: 100vh;
+  width: 100vw;
+}

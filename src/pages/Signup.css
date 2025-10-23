@@ -1,0 +1,103 @@
+.signup-container {
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.signup-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+.signup-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.signup-logo {
+  width: 60px; /* slightly smaller for alignment */
+}
+
+.signup-brand {
+  font-weight: bold;
+  font-size: 30px;
+  color: #333;
+}
+.signup-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.signup-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Reuse signup-button design */
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #f16b35; /* green for normal signup */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* spacing between logo and text */
+}
+
+/* Google button same size but white */
+.google-signup {
+  background-color: #ffffff;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+.google-signup:hover {
+  background-color: #f5f5f5;
+}
+
+/* Google logo size inside button */
+.google-logo {
+  width: 20px;
+  height: 20px;
+}
+
+
+.signup-button:hover {
+  background-color: #e36d52;
+}
+
+.signup-footer {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-footer span {
+  color: #ff7e5f;
+  cursor: pointer;
+}

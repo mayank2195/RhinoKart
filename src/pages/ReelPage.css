@@ -1,0 +1,352 @@
+.reel-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  background-color: #000000;
+}
+
+.reel {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content{
+  margin:auto;
+}
+
+.reel-video {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+.center-fire-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 80px;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.show-center-fire {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.reel-actions {
+  position: absolute;
+  right: 0%; /* video ke right se 10px gap */
+  top: 50%; /* starting point */
+  transform: translateY(-60%); /* thoda aur upar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* icons ke beech ka gap */
+}
+.reel-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+}
+
+.action span {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.fire-animation {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.show-fire {
+  opacity: 1 !important;
+  transform: scale(1.5);
+}
+
+.product-details-bottom {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+}
+
+.product-details-bottom .product-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-details-bottom .product-price {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.product-buttons button {
+  width: 110px;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.view-product-btn {
+  background: #dc6f15;
+  color: black;
+  height:50px;
+}
+
+.buy-now-btn {
+  background: #de3b28;
+  color: white;
+  height:50px;
+}
+.action-btn {
+  flex: 1;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* smooth effect */
+}
+
+.action-btn:hover {
+  opacity: 0.7; /* hover pe thoda fade */
+}
+.sidebar {
+  position: fixed; /* stays in place */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 270px;
+  background-color:#d3b896;/* light background */
+  color: rgb(255, 255, 255); /* dark text */
+  overflow-y: auto;
+  padding-top: 20px;
+}
+.sidebar-bottom {
+  padding: 10px;
+  
+}
+
+.go-back-btn {
+  background: none;
+  border: none;
+  color: var(--sidebar-text);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.go-back-btn:hover {
+  color:#d37730;
+ background: var(--sidebar-item-hover);
+}
+
+/* Hide sidebar entirely on mobile */
+/* Hide sidebar entirely on mobile */
+/* Mobile screen sidebar bottom fix */
+/* Mobile screen sidebar bottom fix */
+/* Mobile screen sidebar bottom fix */
+/* Mobile screen: bottom nav */
+@media (max-width: 1020px) {
+  .sidebar {
+    position: fixed !important;
+    bottom: 0 !important;
+    top: auto !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    background-color: #d3b896;
+    display: flex !important;
+    flex-direction: row !important;   /* items ek row me */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    padding: 0;
+  }
+
+  .sidebar-item {
+    display: flex;
+    flex-direction: column;  /* ✅ icon upar, text neeche */
+    align-items: center;
+    justify-content: center;
+    flex: 1;                 /* equal space for all items */
+    color: white;
+    font-size: 12px;         /* text chhota */
+  }
+
+  .sidebar-item svg {
+    font-size: 22px;         /* icon size */
+    margin-bottom: 2px;      /* icon aur text ke beech gap */
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    margin: auto;     /* bottom bar ke liye jagah */
+  }
+}
+.comments-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Default full width for mobile */
+  height: 30%;
+  background: #f4ece2;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translate(-50%, 100%); }
+  to { transform: translate(-50%, 0); }
+}
+
+.comments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #dfcab9;
+  color: #3b2f2f;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.comments-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(223, 202, 176, 0.6);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-content strong {
+  color: #5a4635;
+  font-size: 15px;
+}
+
+.comment-content p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #4b3a2e;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #7b6a5c;
+}
+.comment-input {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  background: #f4ece2;
+  gap: 8px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(223, 202, 176, 0.15);
+  color: #3b2f2f;
+}
+
+.comment-input input::placeholder {
+  color: #8b6a5c;
+}
+
+.comment-input button {
+  background: none;
+  border: none;
+  color: #3b2f2f;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+  .comments-overlay {
+    width: calc(100% - 200px); /* 200px wider than current card area */
+    max-width: 600px; /* optional max cap */
+    height:50%;
+  }
+}
+
+@keyframes slideUp {
+  from { transform: translate(-50%, 100%); }
+  to { transform: translate(-50%, 0); }
+}
+
+
+@media(max-width: 768px) {
+  .reel-actions {
+    right: 10%;
+  }
+  .comments-overlay{
+    margin-bottom:75px;
+  }
+}
+
+

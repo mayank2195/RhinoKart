@@ -1,0 +1,127 @@
+.cart-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+button.delete-btn {
+  background: #ff672bf3 !important;   
+  color: #fff !important;
+  border: none !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  width:100px;
+}
+.cart-background{
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height:100vh;
+    width:100vw;
+}
+button.delete-btn:hover {
+  background: #d97a42 !important;   
+}
+.cart-title {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.cart-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.qty-controls {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-controls button {
+  background: #4d4d4d;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qty-controls span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart-info {
+  flex: 1;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.cart-info h3 {
+  margin: 0;
+}
+
+
+
+.cart-summary {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.checkout-btn {
+  margin-top: 10px;
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 🔹 Mobile Responsive */
+@media (max-width: 600px) {
+ 
+
+  .cart-info {
+    margin: 10px 0;
+  }
+
+  .cart-actions {
+    margin-top: 10px;
+  }
+}
+
+.checkout-btn:hover{
+    background: rgba(0,128,0,0.9);
+}

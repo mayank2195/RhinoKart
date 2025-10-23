@@ -1,0 +1,130 @@
+/* Container */
+.product-details-container {
+  background-color: #f4ece2;
+  min-height: 100vh;
+  padding-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* -------- Top Bar -------- */
+.top-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #f4ece2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  height: 50px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  color: #333;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.search-bar {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* -------- Product List -------- */
+.product-list {
+  margin-top: 20px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* -------- Card -------- */
+.product-card {
+  height:auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* -------- Image -------- */
+.product-image {
+  width: 100%;
+  height: 240px;
+  border-radius: 8px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* -------- Info -------- */
+.product-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+
+.product-price {
+  font-size: 15px;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* -------- Actions -------- */
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.watch-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}

@@ -1,0 +1,253 @@
+/* ------------- Page Base ------------- */
+:root{
+  --page-bg: #f4ece2;
+  --card-bg: #ffffff;
+  --text: #1f2937;          /* neutral-800 */
+  --muted: #6b7280;         /* neutral-500 */
+  --brand: #0f766e;         /* teal-700 */
+  --brand-2: #14b8a6;       /* teal-500 */
+  --border: #e5e7eb;        /* neutral-200 */
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --radius: 18px;
+  --radius-lg: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+ 
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------- States ------------- */
+.loading,
+.not-found {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* ------------- Layout ------------- */
+.view-container {
+  min-height: 100vh;
+  padding: 32px clamp(16px, 4vw, 48px);
+  display: grid;
+  place-items: center;
+}
+
+.product-card2 {
+  width: 100%;
+  max-width: 1100px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.details-section {
+    padding: 15px;
+}
+.media-section-scrollable {
+    /* 100% width of its parent (.product-card2) */
+    width: 100%; 
+    /* फिक्स्ड हाइट दें ताकि स्क्रॉलिंग सही से काम करे */
+    height: 300px; 
+    /* हॉरिजॉन्टल स्क्रॉलिंग enable करें */
+    overflow-x: auto; 
+    /* ऊर्ध्वाधर स्क्रॉलिंग छिपाएँ */
+    overflow-y: hidden;
+    /* सभी इमेजेज को एक ही लाइन में रखें */
+    white-space: nowrap; 
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+    /* (Optional) iOS style scrolling for a smoother feel */
+    -webkit-overflow-scrolling: touch; 
+}
+.media-section-gallery {
+    /* Set a specific height for the gallery on the product card */
+    height: 350px; 
+    width: 100%;
+    /* Ensure the gallery fills the top part of the card */
+    border-radius: 10px 10px 0 0; 
+    overflow: hidden; /* Important for clean corners */
+}
+.product-image-scrollable {
+    /* इमेजेज को horizontal scrollable बनाने के लिए */
+    display: inline-block; 
+    /* Container की फिक्स्ड हाइट लें */
+    height: 100%; 
+    /* सभी इमेजेज का साइज़ बराबर रखें */
+    width: 100%; 
+    /* इमेज को कवर करें ताकि यह स्ट्रेच न हो */
+    object-fit: cover; 
+    /* इमेजेज के बीच कोई गैप न हो */
+    margin-right: 0; 
+}
+
+/* Two-column layout on larger screens */
+@media (min-width: 900px) {
+  .product-card {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* ------------- Media Section ------------- */
+.media-section {
+  background: #fafafa;
+  border-right: none;
+  display: grid;
+  gap: 16px;
+  padding: clamp(16px, 3vw, 28px);
+  align-content: start;
+}
+
+.product-image,
+.product-video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+
+/* Keep media nicely contained on tall assets */
+.product-image {
+  object-fit: contain;
+  max-height: 520px;
+}
+
+.product-video {
+  max-height: 520px;
+}
+
+/* ------------- Details Section ------------- */
+.details-section {
+  padding: clamp(18px, 3.5vw, 32px);
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.product-title {
+  margin: 0;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+}
+
+.product-brand {
+  margin: 2px 0 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.product-price {
+  margin: 8px 0 4px 0;
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 28px);
+  color: var(--brand);
+}
+
+.product-description {
+  margin: 6px 0 16px 0;
+  color: #374151; /* neutral-700 */
+  line-height: 1.6;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+/* ------------- Buttons ------------- */
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.button-row button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.button-row button:active {
+  transform: translateY(1px);
+}
+
+.back-btn {
+  background: #fff;
+}
+
+.back-btn:hover {
+  border-color: #cbd5e1; /* neutral-300 */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.add-cart-btn {
+  background: linear-gradient(180deg, var(--brand-2), var(--brand));
+  color: #fff;
+  border-color: transparent;
+}
+
+.add-cart-btn:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 10px 22px rgba(20, 184, 166, 0.25);
+}
+
+/* ------------- Subtle separators ------------- */
+.details-section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 8px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  opacity: 0.5;
+}
+
+/* ------------- Small Screens Tweaks ------------- */
+@media (max-width: 899px) {
+  .media-section {
+    padding-bottom: 12px;
+  }
+  .details-section {
+    border-top: 1px solid var(--border);
+  }
+}
+
+/* ------------- Accessibility / Motion ------------- */
+@media (prefers-reduced-motion: reduce) {
+  .button-row button,
+  .add-cart-btn:hover,
+  .back-btn:hover {
+    transition: none;
+  }
+}
+
+/* ------------- Optional: Narrow heights ------------- */
+@media (max-height: 700px) and (min-width: 900px) {
+  .product-image,
+  .product-video {
+    max-height: 420px;
+  }
+}
